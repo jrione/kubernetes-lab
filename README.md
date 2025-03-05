@@ -3,13 +3,13 @@
 1. Git Clone application from github
 
    ```
-   git clone https://github.com/jrione/kubernetes-lab
+   git clone https://github.com/jrione/kubernetes-lab && cd kubernetes-lab
    ```
 2. Create folder /mnt/data, copy index.html and set with rwx permission
 
    ```
    mkdir /mnt/data
-   cp index.html /mnt/data
+   cp $(pwd)/app/index.html /mnt/data
    chmod -R 777 /mnt/data
    chown -R nobody:nogroup /mnt/data
    ```
@@ -39,4 +39,3 @@
    kubectl get service -n example
    ```
 8. And then, access your app. http://<YOUR_IP>:32000
-9.
